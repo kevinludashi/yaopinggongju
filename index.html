@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,13 +78,17 @@
 <body>
     <h1>邀评工具 2.0</h1>
     <div class="form-group">
-        <label>店铺名称：</label>
-        <input type="text" id="shopName" required>
-    </div>
-    <div class="form-group">
         <label>邀评时间：</label>
         <input type="date" id="reviewDate" required>
     </div>
+	<div class="form-group">
+	    <label>店铺名称：</label>
+	    <input type="text" id="shopName" required>
+	</div>
+	<div class="form-group">
+	    <label>订单下单时间：</label>
+	    <input type="date" id="xiadanshijian" required>
+	</div>
     <div class="form-group">
         <label>产品简称：</label>
         <input type="text" id="productName" required>
@@ -150,6 +155,7 @@
         const data = {
             shopName: document.getElementById('shopName').value,
             reviewDate: document.getElementById('reviewDate').value,
+			xiadanshijian: document.getElementById('xiadanshijian').value,
             productName: document.getElementById('productName').value,
             wangwangId: document.getElementById('wangwangId').value,
             orderId: document.getElementById('orderId').value,
@@ -318,6 +324,10 @@
             <span class="label">邀评时间：</span>
             <span class="content">${data.reviewDate}</span>
         </div>
+		<div class="info-row">
+		    <span class="label">订单下单时间：</span>
+		    <span class="content">${data.xiadanshijian}</span>
+		</div>
         <div class="info-row">
             <span class="label">店铺名称：</span>
             <span class="content">${data.shopName}</span>
